@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+    
+        <!-- Images. -->
+        <img id="city" src="Assets/sky.jpg">
+      
+      </a-assets>
+    
+      <!-- 360-degree image. -->
+      <a-sky id="image-360" radius="10" src="#city"></a-sky>
+    
+      <!-- Link template we will build. -->
+      <a-entity class="link"></a-entity>
+    
+      <!-- Camera + Cursor. -->
+      <a-camera>
+        <a-cursor
+          id="cursor"
+          animation__click="property: scale; from: 0.1 0.1 0.1; to: 1 1 1; easing: easeInCubic; dur: 150; startEvents: click"
+          animation__clickreset="property: scale; to: 0.1 0.1 0.1; dur: 1; startEvents: animationcomplete__click"
+          animation__fusing="property: scale; from: 1 1 1; to: 0.1 0.1 0.1; easing: easeInCubic; dur: 150; startEvents: fusing"></a-cursor>
+      </a-camera>
+    
+      <a-assets>
+        <a-mixin id="skin" material="color:#ecbcb4"></a-mixin>
+        <a-mixin id="red" material="color: red"></a-mixin>
+        <a-mixin id="black" material="color:black"></a-mixin>
+      </a-assets>
+      <a-entity geometry="primitive: box; width: 1; height: 1.5; depth: 1" material="src:Assets/cloth.jpg"position="7.609 2.048 0.047" ></a-entity>
+      <a-entity geometry="primitive: box; width: 1; height: 0.2; depth: 0.6" position="7.609 2.873 0.069 " mixin="skin"></a-entity>
+      <a-entity geometry="primitive: sphere; radius:0.6;"position="7.609 3.548 0.069" mixin="skin" ></a-entity>
+      <a-entity geometry="primitive: cone; radiusBottom: 0.7; radiusTop: 0.01"position="7.609 4.504 0.069"  mixin="red"></a-entity>
+      <a-entity geometry="primitive: box; width: 1; height: 1.2; depth: 0.3"position="7.609 0.7 -0.310" mixin="skin"></a-entity>
+      <a-entity geometry="primitive: box; width: 1; height: 1.2; depth: 0.3"position="7.609 0.7 0.410"mixin="skin" ></a-entity>
+      <a-entity geometry="primitive: box; width: 0.3; height: 1.2; depth: 0.3" position="7.675 2.246 0.717"mixin="skin" rotation="-27.652 0 0" 
+      animation="property: rotation; to: -56.853 0 0; dur: 3000; easing: linear; loop: true"
+      animation__2="property: position; to:7.676 2.358 0.923; dur: 3000; easing: linear; loop: true"
+      ></a-entity>
+      <a-entity geometry="primitive: box; width: 1; height: 1.2; depth: 0.3" position="7.636 2.196 -0.567" mixin="skin"rotation="22.019 0 0"
+      animation="property: rotation; to: 65.345 0 0; dur: 3000; easing: linear; loop: true"
+      animation__2="property: position; to:7.708 2.413 -0.905; dur: 3000; easing: linear; loop: true"
+      ></a-entity>
+      <a-entity geometry="primitive: ring; radiusInner:0.180; radiusOuter: 0.080"position="6.950 3.655 -0.180" rotation="16.732 77.405 170.674 "mixin="black"></a-entity>
+      <a-entity geometry="primitive: ring; radiusInner:0.180; radiusOuter: 0.080"position="6.765 3.655 0.290"rotation="16.732 77.405 170.674 "mixin="black"></a-entity>
+      <a-entity geometry="primitive: ring; radiusInner:0.090; radiusOuter: 0"position="6.950 3.455 0.080"material="color:brown" rotation="16.732 77.405 170.674 "></a-entity>
+      <a-entity geometry="primitive: ring; radiusInner:0.220; radiusOuter:0.130; thetastart:0; thetaLength:180" mixin="red" position="6.950 3.309 0.080" rotation="16.732 77.405 170.674 "></a-entity>
+     <!-- Curved surface -->
+<a-entity geometry="primitive: cylinder; openEnded: true; thetaLength: 180"position="4.950 0.995 2.216" rotation="0 0 90"    
+  animation="property: rotation; to: 0 0 -90; dur: 5000; easing: linear; loop: true"
+
+material="side: double"></a-entity>
+
+<a-entity geometry="primitive: cylinder; segmentsRadial: 3" position="4.950 -0.995 2.216" ></a-entity>
+<a-entity geometry="primitive: octahedron" position="4.851 0.717 -2.297"></a-entity>
+<a-entity geometry="primitive: tetrahedron; radius: 1"position="4.268 1.798 -4.121"></a-entity>
+<a-entity geometry="primitive: torusKnot; p: 3; q:7"position="6.268 2.798 -2.121"></a-entity>
+
+
+
+     
+    </a-scene>
+
+   
+  </body>
+</html>
