@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+
+      <a-entity
+        geometry="primitive: box"
+        material="color: red" position="-1.694 1.825 -3.767"
+        animation__mouseenter="property: components.material.material.color; type: color; to: blue; startEvents: mouseenter; dur: 500";
+        animation__mouseleave="property: components.material.material.color; type: color; to: red; startEvents: mouseleave; dur: 500";></a-entity>
+      
+        <a-entity camera look-controls>
+          <a-entity cursor="fuse: true; fuseTimeout: 500;"
+                    position="0 0 -1"
+                    geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                    material="color: black; shader: flat">
+          </a-entity>
+        </a-entity>
+        
+        <a-entity id="box" cursor-listener geometry="primitive: box"  position="-2.223 0.405 -3.780"material="color: blue" rotation="0 0 0"
+        animation__up="property: rotation; to: 0 90 90; startEvents: mouseup;dur: 500"
+        animation__down="property: rotation; to: 0 -90 -90; startEvents: mousedown;dur: 500"></a-entity>
+       
+        <a-entity  id="hovering"
+        geometry="primitive: box"
+        material="color: red"position="1.724 2.540 -3.441"
+        animation="property: components.material.material.color; type: color; to: green; loop:true; dur: 500";
+        
+     ></a-entity>
+     <a-entity
+  animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 0.5"
+  animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 0.5 0.5 0.5; to: 0.1 0.1 0.1"
+  animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 0.5 0.5 0.5"
+  cursor="fuse: true;"
+  material="color: black; shader: flat"
+  position="-0.229 1.267 -3.721"
+  geometry="primitive: ring"></a-entity>
+
+
+  <a-entity
+  animation__click="property: components.material.material.color; type: color; to: blue; startEvents: mouseenter; dur: 500";
+ 
+  cursor="fuse: true;"
+  material="color: black; shader: flat"
+  position="1.785 -0.015 -4.210"
+  geometry="primitive: ring"></a-entity>
+    </a-scene>
+
+   
+  </body>
+</html>
