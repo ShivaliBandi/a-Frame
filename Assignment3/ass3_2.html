@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  
+  </head>
+  <body>
+    <a-scene>            
+      
+        <a-assets>
+
+        
+          <a-asset-item id="car-mtl" src="Assets/car/ferrari-f1-race-car.mtl"></a-asset-item>
+          <a-asset-item id="car-obj" src="Assets/car/ferrari-f1-race-car.obj"></a-asset-item>
+
+          
+
+          
+        </a-assets>   
+
+        <a-entity obj-model="obj: #car-obj ; mtl: #car-mtl" 
+            rotation="0 78.97 -1.443" 
+            position="0 0 -10"
+            animation="property:rotation;to: 0 360 0;loop:true;dur:3000;easing:linear"></a-entity>
+
+        
+
+        <a-plane color="#DFCFBE" height="100" width="100" rotation="-90 0 0"></a-plane>
+      
+      <a-sky color="crimson"></a-sky>
+      
+    </a-scene>
+  </body>
+ 
+</html>
+
+      

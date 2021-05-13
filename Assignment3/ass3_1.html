@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene background="color:pink">
+      <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+
+      <a-entity camera look-controls>
+       <a-entity cursor="fuse: true; fuseTimeout: 500"
+            position="0 0 -1"
+            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+            material="color: black; shader: flat">
+       </a-entity>
+       </a-entity>
+      <a-entity geometry="primitive : box;depth:1;width:1;height:1" 
+                material="color :red" 
+                position="-3 0 -5"
+                animation__mouseenter="property:components.material.material.color;type:color;to:green;startEvents:mouseenter;dur:500"
+                animation__mouseleave="property:components.material.material.color;type:color;to:red;startEvents:mouseleave;dur:500">            
+      </a-entity>
+
+      <a-entity geometry="primitive : octahedron;radius:1.2" 
+      material="color :blue;side:back" 
+      position="0 -4 -5" rotation="0 0 0"
+      animation__mousedown="property:rotation;to:0 360 360;startEvents:mousedown;dur:550;"
+      animation__mouseup="property: rotation; to: -360 -360 0; startEvents: mouseup; dur: 500">
+</a-entity>
+      <a-entity geometry="primitive : cone;radiusBottom:0.5;radiusTop:0;height:1;thetaStart:90;
+      thetaLength:3600" 
+                material="color : green;side:double" 
+                position="-5 -3 -5"
+                animation__mouseenter="property:rotation;startEvents:mouseenter;to:0 180 180;dur:500;"
+                animation__mouseleave="property:rotation ;startEvents:mouseleave; to:0 0 0;dur:500">
+      </a-entity>
+
+     
+
+    
+      
+   
+      <a-entity geometry="primitive : cylinder;height:1;radius:0.5" 
+                material="color : purple;side:front" 
+                position="0.492 0.250 -3.540"
+                animation__mouseenter="property:position;to:0.492 1.72 -3.540;startEvents:mouseenter;loop:true;dur:700;"
+                animation__mouseleave="property:position; to:0.492 0.250 -3.540;startEvents:mouseleave"></a-entity>
+      
+
+      
+    </a-scene>
+  </body>
+</html>
