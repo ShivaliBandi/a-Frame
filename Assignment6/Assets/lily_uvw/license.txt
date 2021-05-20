@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lily UVW
+* source:	https://sketchfab.com/3d-models/lily-uvw-a0bc2a2cedb94cb69c6b61e1705a987f
+* author:	moonlight4art (https://sketchfab.com/moonlight4art)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lily UVW" (https://sketchfab.com/3d-models/lily-uvw-a0bc2a2cedb94cb69c6b61e1705a987f) by moonlight4art (https://sketchfab.com/moonlight4art) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
